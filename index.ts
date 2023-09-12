@@ -46,7 +46,7 @@
 // compilerOptions.strictNullChecks
 {
   const loggedInUsername: string = 'Yao'
-  
+
   const users = [
     { name: 'Oby', age: 12 },
     { name: 'Heera', age: 32 },
@@ -54,4 +54,21 @@
 
   const loggedInUser = users.find(u => u.name === loggedInUsername)
   console.log(loggedInUser.age)
+}
+
+// compilerOptions.strictPropertyInitialization 2.7
+{
+  class UserAccount {
+    name: string
+    accountType = 'user'
+
+    email: string
+
+    address: string | undefined
+
+    constructor(name: string) {
+      this.name = name
+      // Note that this.email is not set
+    }
+  }
 }
