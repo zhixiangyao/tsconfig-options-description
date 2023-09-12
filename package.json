@@ -1,0 +1,11 @@
+{
+  "name": "tsconfig-options-description",
+  "version": "0.1.0",
+  "description": "tsconfig.json options description",
+  "main": "index.ts",
+  "type": "module",
+  "author": "zhixiangyao",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
