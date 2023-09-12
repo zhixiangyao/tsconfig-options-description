@@ -96,3 +96,28 @@
   }
   fn3(42)
 }
+
+// compilerOptions.noImplicitThis 2.0
+{
+  class Rectangle {
+    width: number
+    height: number
+
+    constructor(width: number, height: number) {
+      this.width = width
+      this.height = height
+    }
+
+    getAreaFunction0() {
+      return () => {
+        return this.width * this.height
+      }
+    }
+
+    getAreaFunction1() {
+      return function () {
+        return this.width * this.height
+      }
+    }
+  }
+}
