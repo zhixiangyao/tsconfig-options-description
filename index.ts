@@ -72,3 +72,18 @@
     }
   }
 }
+
+// compilerOptions.useUnknownInCatchVariables 4.4
+{
+  try {
+    // ...
+  } catch (err) {
+    // err: any => err: unknown
+
+    // We have to verify err is an
+    // error before using it as one.
+    if (err instanceof Error) {
+      console.log(err.message)
+    }
+  }
+}
