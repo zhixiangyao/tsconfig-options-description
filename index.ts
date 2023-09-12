@@ -28,3 +28,17 @@
   const n1 = fn1.call(undefined, '10')
   const n2 = fn1.call(undefined, false)
 }
+
+// compilerOptions.strictFunctionTypes
+{
+  function fn2(x: string) {
+    console.log('Hello, ' + x.toLowerCase())
+  }
+
+  type StringOrNumberFunc = (ns: string | number) => void
+
+  // Unsafe assignment
+  let func: StringOrNumberFunc = fn2
+  // Unsafe call - will crash
+  func(10)
+}
