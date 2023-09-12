@@ -19,3 +19,12 @@
     }
   }
 }
+
+// compilerOptions.strictBindCallApply
+{
+  function fn1(x: string) {
+    return parseInt(x)
+  }
+  const n1 = fn1.call(undefined, '10')
+  const n2 = fn1.call(undefined, false)
+}
