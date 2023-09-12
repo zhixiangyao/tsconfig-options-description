@@ -87,3 +87,12 @@
     }
   }
 }
+
+// compilerOptions.noImplicitAny 2.0
+{
+  function fn3(s) {
+    // Parameter 's' implicitly has an 'any' type.
+    console.log(s.subtr(3))
+  }
+  fn3(42)
+}
